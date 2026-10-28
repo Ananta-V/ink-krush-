@@ -1,1 +1,43 @@
+# ==========================================
+# Python & Selenium Installation Commands
+# ==========================================
+
+# 1. Verify Python & pip are installed (Python 3.10+ recommended)
+python --version
+pip --version
+
+# (Optional: Install Python via Windows Package Manager if not installed)
+# winget install Python.Python.3.12
+
+# 2. Upgrade pip (recommended)
+python -m pip install --upgrade pip
+
+# 3. Install Selenium and test dependencies
+pip install selenium pytest webdriver-manager
+
+# ==========================================
+# Run Automated Tests
+# ==========================================
+
+# Run all tests:
 python -m pytest inkrush_tests/ -v
+
+# Run specific test modules:
+python -m pytest inkrush_tests/test_01_intro.py -v
+python -m pytest inkrush_tests/test_02_auth.py -v
+python -m pytest inkrush_tests/test_03_catalog.py -v
+python -m pytest inkrush_tests/test_04_wishlist.py -v
+python -m pytest inkrush_tests/test_05_cart.py -v
+python -m pytest inkrush_tests/test_06_checkout.py -v
+python -m pytest inkrush_tests/test_07_orders.py -v
+python -m pytest inkrush_tests/test_08_payments.py -v
+python -m pytest inkrush_tests/test_09_profile.py -v
+python -m pytest inkrush_tests/test_10_auth_flow.py -v
+python -m pytest inkrush_tests/test_11_edge_cases.py -v
+
+# ==========================================
+# Git Remote & Push Commands
+# ==========================================
+# git remote add origin https://github.com/Ananta-V/ink-krush-.git
+# git branch -M main
+# git push -u origin main
